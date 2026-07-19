@@ -1,0 +1,612 @@
+/* ==========================================
+   CINEFRAMES Premium Animations
+========================================== */
+
+/* Smooth Scroll */
+html{
+    scroll-behavior:smooth;
+}
+
+/* General Transition */
+
+*{
+    transition:all .35s ease;
+}
+
+/* =============================
+   Fade Up Animation
+============================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* =============================
+   Fade Left
+============================= */
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+    transition:1s;
+
+}
+
+.fade-left.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* =============================
+   Fade Right
+============================= */
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(80px);
+
+    transition:1s;
+
+}
+
+.fade-right.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* =============================
+   Zoom
+============================= */
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+    transition:.9s;
+
+}
+
+.zoom.active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* =============================
+   Hero Animation
+============================= */
+
+.hero h1{
+
+    animation:heroTitle 1.2s ease forwards;
+
+}
+
+.hero p{
+
+    animation:heroText 1.8s ease forwards;
+
+}
+
+.hero .btn{
+
+    animation:heroButton 2.2s ease forwards;
+
+}
+
+@keyframes heroTitle{
+
+0%{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heroText{
+
+0%{
+
+opacity:0;
+
+transform:translateY(80px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heroButton{
+
+0%{
+
+opacity:0;
+
+transform:translateY(100px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =============================
+   Floating Cards
+============================= */
+
+.float{
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =============================
+   Button Glow
+============================= */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.3),
+
+transparent
+
+);
+
+transition:.7s;
+
+}
+
+.btn:hover::before{
+
+left:100%;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px) scale(1.04);
+
+box-shadow:0 0 35px rgba(255,200,50,.45);
+
+}
+
+/* =============================
+   Card Hover
+============================= */
+
+.card,
+.service-card,
+.price-card{
+
+transition:.4s;
+
+}
+
+.card:hover,
+.service-card:hover,
+.price-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+}
+
+/* =============================
+   Image Hover
+============================= */
+
+img{
+
+transition:.5s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.08);
+
+}
+
+/* =============================
+   Video Hover
+============================= */
+
+video{
+
+transition:.6s;
+
+}
+
+video:hover{
+
+transform:scale(1.04);
+
+}
+
+/* =============================
+   Navbar
+============================= */
+
+header{
+
+transition:.4s;
+
+}
+
+header.sticky{
+
+background:rgba(0,0,0,.92);
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 8px 25px rgba(0,0,0,.3);
+
+}
+
+/* =============================
+   Logo
+============================= */
+
+.logo img{
+
+animation:logoFloat 6s infinite ease-in-out;
+
+}
+
+@keyframes logoFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =============================
+   Pulse
+============================= */
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* =============================
+   Rotate
+============================= */
+
+.rotate:hover{
+
+transform:rotate(6deg);
+
+}
+
+/* =============================
+   Back To Top
+============================= */
+
+.back-to-top{
+
+transition:.4s;
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+.back-to-top.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+/* =============================
+   Progress Bar
+============================= */
+
+.progress-bar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0;
+
+background:linear-gradient(90deg,#FFC857,#FF7A18);
+
+z-index:9999;
+
+}
+
+/* =============================
+   Loader
+============================= */
+
+.loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#050505;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+transition:.6s;
+
+}
+
+.loader-hidden{
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+.loader::after{
+
+content:"";
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+border:6px solid #333;
+
+border-top:6px solid #FFC857;
+
+animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* =============================
+   Gradient Text
+============================= */
+
+.gradient-text{
+
+background:linear-gradient(90deg,#FFC857,#FF7A18);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+/* =============================
+   Scroll Down Icon
+============================= */
+
+.scroll-down{
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,20%,50%,80%,100%{
+
+transform:translateY(0);
+
+}
+
+40%{
+
+transform:translateY(-12px);
+
+}
+
+60%{
+
+transform:translateY(-6px);
+
+}
+
+}
+
+/* =============================
+   Social Icons
+============================= */
+
+.social-icons a:hover{
+
+transform:translateY(-5px) scale(1.15);
+
+}
+
+/* =============================
+   Pricing Card Highlight
+============================= */
+
+.price-card.featured{
+
+animation:featuredGlow 3s infinite alternate;
+
+}
+
+@keyframes featuredGlow{
+
+0%{
+
+box-shadow:0 0 15px rgba(255,200,87,.2);
+
+}
+
+100%{
+
+box-shadow:0 0 45px rgba(255,200,87,.6);
+
+}
+
+}
